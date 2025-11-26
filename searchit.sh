@@ -19,7 +19,6 @@ echo -e "\n\n Searching files with the name $filename ....\n -------------------
 
 echo -e "\n\n Deep search...\n (Searching all files and folders with the name $filename)\n ----------------------------------------------------"
 	find / -name "$filename" -o -name "$filename.*" 2>/dev/null
-
 echo
 echo -e "Search completed!\n"
 
