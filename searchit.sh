@@ -7,17 +7,20 @@ echo -e "\t\t----------"
 read -p "Enter Filename or Foldername to search: " filename
 
 if [ -z "$filename" ]; then
-    echo "Error: No filename entered!"
+    echo "Error: No name entered!"
     exit 1
 fi
 
-echo
-echo "Searching for: $filename"
-echo "Searching....."
-echo
+echo -e "\n\nSearching folders with the name $filename ..."
 
-find / -name "$filename" -o -name "$filename.*" 2>/dev/null
+	find / -type d -name "$filename" 2>/dev/null
 
+echo -e "\n\nSearching files with the name $filename ..."
+
+	find / -type f -name "$filename" 2>/dev/null
+
+echo -e "\n\nSearching all files and extensions related to $filename ..."
+	find / -type f -name "$filename.*" 2>/dev/null
 echo
 echo -e "Search completed!\n"
 
