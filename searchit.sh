@@ -17,6 +17,7 @@ echo -e "
 
 								"
 
+echo -e "\t\t\tsearch it\n"
 while true; do
 	echo -e "\nTo stop search press CTRL+Z. \n"
 
